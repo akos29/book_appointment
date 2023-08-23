@@ -46,3 +46,11 @@ group :development do
   # gem "spring"
 end
 
+
+gem "rack-cors", "~> 2.0"
+
+gem "devise", "~> 4.9"
+gem "cancancan", "~> 3.5"
+
+gem "devise-jwt", "~> 0.11.0"
+gem "jsonapi-serializer", "~> 2.2"
