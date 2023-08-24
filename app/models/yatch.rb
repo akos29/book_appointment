@@ -1,0 +1,2 @@
+class Yatch < ApplicationRecord
+end
