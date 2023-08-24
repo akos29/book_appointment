@@ -60,11 +60,11 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Yatch Booking App <a name="about-project"></a>
+# 📖 [your_project_name] <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**Yatch Booking App** is a responsive application that allows users to search for, book, and pay for yacht charters.
+**[your_project__name]** is a...
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -205,29 +205,17 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Mahabub Alam**
+👤 **Author1**
 
-- GitHub: [@mahabubx7](https://github.com/mahabubx7)
-- Twitter: [@mahabub\_\_7](https://twitter.com/mahabub__7)
-- LinkedIn: [in/mahabubx7](https://linkedin.com/in/mahabubx7)
+- GitHub: [@githubhandle](https://github.com/githubhandle)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
-👤 **Lugard Agu**
+👤 **Author2**
 
-- GitHub: [@lugard1](https://github.com/lugard1)
-- Twitter: [@Dsn3kings](https://twitter.com/Dsn3kings)
-- LinkedIn: [@LugardAgu](https://www.linkedin.com/in/lugardagu)
-
-👤 **Nana Vanina**
-- GitHub: [@vanina123](https://github.com/vanina123)
-- Twitter: [@Dufevan](https://twitter.com/DufeVanina)
-- LinkedIn: [Vanina](https://www.linkedin.com/in/larissa-vanina/)
-
-👤 **Kibrewossen Y Mekasha**
-
-- GitHub: [@akos29](https://github.com/akos29)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kibrewossen-y-mekasha/)
-
-
+- GitHub: [@githubhandle](https://github.com/githubhandle)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -293,7 +281,7 @@ I would like to thank...
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
