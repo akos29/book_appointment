@@ -222,6 +222,12 @@ Example:
 - Twitter: [@Dufevan](https://twitter.com/DufeVanina)
 - LinkedIn: [Vanina](https://www.linkedin.com/in/larissa-vanina/)
 
+👤 **Kibrewossen Y Mekasha**
+
+- GitHub: [@akos29](https://github.com/akos29)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kibrewossen-y-mekasha/)
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
