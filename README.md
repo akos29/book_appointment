@@ -60,11 +60,11 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Yatch Booking App <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+**Yatch Booking App** is a responsive application that allows users to search for, book, and pay for yacht charters.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -216,6 +216,11 @@ Example:
 - GitHub: [@lugard1](https://github.com/lugard1)
 - Twitter: [@Dsn3kings](https://twitter.com/Dsn3kings)
 - LinkedIn: [@LugardAgu](https://www.linkedin.com/in/lugardagu)
+
+👤 **Nana Vanina**
+- GitHub: [@vanina123](https://github.com/vanina123)
+- Twitter: [@Dufevan](https://twitter.com/DufeVanina)
+- LinkedIn: [Vanina](https://www.linkedin.com/in/larissa-vanina/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
