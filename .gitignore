@@ -34,4 +34,3 @@
 *.env
 !.env.sample
 !.env.example
-/config/database.yml
