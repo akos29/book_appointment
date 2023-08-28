@@ -6,5 +6,4 @@ class Yacht < ApplicationRecord
   validates :model, presence: true
   validates :captain_name, presence: true, length: { maximum: 50 }
   validates :price, presence: true, numericality: { greater_than: 0 }
-  
 end
