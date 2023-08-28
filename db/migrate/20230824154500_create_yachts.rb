@@ -1,6 +1,6 @@
-class CreateYatches < ActiveRecord::Migration[7.0]
+class CreateYachts < ActiveRecord::Migration[7.0]
   def change
-    create_table :yatches do |t|
+    create_table :yachts do |t|
       t.string :model
       t.string :picture
       t.string :captain_name

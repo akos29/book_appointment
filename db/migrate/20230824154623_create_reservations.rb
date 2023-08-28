@@ -4,7 +4,7 @@ class CreateReservations < ActiveRecord::Migration[7.0]
       t.datetime :date
       t.string :city
       t.references :user, null: false, foreign_key: true, on_delete: :cascade
-      t.references :yatch, null: false, foreign_key: true, on_delete: :cascade
+      t.references :yacht, null: false, foreign_key: true, on_delete: :cascade
 
       t.timestamps
     end
