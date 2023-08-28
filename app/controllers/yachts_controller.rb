@@ -3,7 +3,7 @@ class YachtsController < ApplicationController
     @yachts = Yacht.all
   end
 
-  def create 
+  def create
     @yacht = Yacht.new(yacht_params)
     @yacht.user_id = current_user.id
     if @yacht.save
