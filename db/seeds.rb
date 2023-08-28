@@ -8,6 +8,7 @@
 
 # Create a user
 user = User.create!(
+  name: 'Van',
   email: 'van@gmail.com',
   password: '123456'
 )
@@ -16,6 +17,26 @@ user = User.create!(
 yacht = Yacht.create!(
   model: 'lastest Yacht',
   captain_name: 'Captain John',
+  price: 1000,
+  user: user
+)
+  yacht.yacht_image.attach(io: File.open(Rails.root.join('spec', 'upload', 'files', 'sample.jpeg')), filename: 'sample.jpeg', content_type: 'image/jpeg')
+
+puts 'Seed data created successfully.'
+
+yacht = Yacht.create!(
+  model: 'lastest Yacht',
+  captain_name: 'Captain KB',
+  price: 1000,
+  user: user
+)
+  yacht.yacht_image.attach(io: File.open(Rails.root.join('spec', 'upload', 'files', 'sample.jpeg')), filename: 'sample.jpeg', content_type: 'image/jpeg')
+
+puts 'Seed data created successfully.'
+
+yacht = Yacht.create!(
+  model: 'lastest Yacht',
+  captain_name: 'Captain Van',
   price: 1000,
   user: user
 )
