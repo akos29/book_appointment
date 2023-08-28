@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class YatchTest < ActiveSupport::TestCase
+class YachtsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
