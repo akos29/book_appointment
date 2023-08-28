@@ -70,7 +70,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_28_095547) do
 
   create_table "yachts", force: :cascade do |t|
     t.string "model"
-    t.string "picture"
     t.string "captain_name"
     t.decimal "price"
     t.bigint "user_id", null: false
