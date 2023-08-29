@@ -25,12 +25,11 @@ class YachtsController < ApplicationController
     end
   end
 
-
   def show
     @yacht = Yacht.find(params[:id])
     render json: @yacht.as_json.merge(photo: url_for(@yacht.yacht_image))
   end
-  
+
 
   private
 
