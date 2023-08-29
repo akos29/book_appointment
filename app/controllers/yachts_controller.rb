@@ -12,6 +12,7 @@ class YachtsController < ApplicationController
   def create
     @yacht = Yacht.new(yacht_params)
     @yacht.user_id = current_user.id
+    @yacht.yacht_image.attach(params[:yacht_image]) # image
     if @yacht.save
       render json: {
         status: { code: 201, message: 'New yachts added.' },
@@ -22,5 +23,11 @@ class YachtsController < ApplicationController
         status: { message: 'Something went wrong!' }
       }, status: :unprocessable_entity
     end
+  end
+
+  private
+
+  def yacht_params
+    params.require(:yacht).permit(:model, :captain_name, :price, :yacht_image)
   end
 end
