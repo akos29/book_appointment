@@ -9,6 +9,11 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # POST /resource/sign_in
+  def create
+    self.resource = warden.authenticate!(auth_options)
+    sign_in(resource_name, resource)
+    render json: { user: resource, jwt: request.env['warden-jwt_auth.token'] }
+  end
 
   # DELETE /resource/sign_out
   # def destroy

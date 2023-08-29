@@ -9,6 +9,16 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
+  def create
+    build_resource(sign_up_params)
+
+    if resource.save
+      sign_up(resource_name, resource)
+      render json: { user: resource, jwt: request.env['warden-jwt_auth.token'] }
+    else
+      render json: { errors: resource.errors.full_messages }, status: :unprocessable_entity
+    end
+  end
 
   # GET /resource/edit
   # def edit
