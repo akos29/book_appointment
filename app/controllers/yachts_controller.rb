@@ -24,12 +24,9 @@ class YachtsController < ApplicationController
     end
   end
 
-  def Show
+  def show
     @yacht = Yacht.find(params[:id])
-    render json: {
-      status: { code: 200, message: 'Display yacht.' },
-      data: @yacht
-    }
+    render json: @yacht.as_json.merge(photo: url_for(@yacht.yacht_image))
   end
   
 end
