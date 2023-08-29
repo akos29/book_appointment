@@ -36,3 +36,5 @@
 *.env
 !.env.sample
 !.env.example
+
+node_modules
