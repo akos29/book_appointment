@@ -25,4 +25,13 @@ class YachtsController < ApplicationController
       }, status: :unprocessable_entity
     end
   end
+
+  def Show
+    @yacht = Yacht.find(params[:id])
+    render json: {
+      status: { code: 200, message: 'Display yacht.' },
+      data: @yacht
+    }
+  end
+  
 end
