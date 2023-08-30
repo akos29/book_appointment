@@ -1,6 +1,13 @@
 class ReservationsController < ApplicationController
   before_action :set_yacht
 
+  def index
+    # @reservations = current_user.reservations.includes(:user, yacht: :user)
+    @user= User.first # after the login implementation we will change this to current_user
+    @reservations = @user.reservations.includes(:user, yacht: :user)
+    render json: @reservations.to_json(include: { user: {}, yacht: { include: :user } })
+  end
+
   def create
     reservation = @yacht.reservations.build(reservation_params)
     reservation.user = current_user
