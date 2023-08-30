@@ -43,3 +43,15 @@ yacht = Yacht.create!(
   yacht.yacht_image.attach(io: File.open(Rails.root.join('spec', 'upload', 'files', 'sample.jpeg')), filename: 'sample.jpeg', content_type: 'image/jpeg')
 
 puts 'Seed data created successfully.'
+
+Create Users
+user1 = User.create!(name: 'Kibre', email: 'kibre@example.com', password: 'password')
+user2 = User.create!(name: 'Van ', email: 'van@example.com', password: 'password')
+
+# Create Yachts
+yacht1 = Yacht.create(model: 'Yacht Model 1', captain_name: 'Captain A', price: 1000, user: user1)
+yacht2 = Yacht.create(model: 'Yacht Model 2', captain_name: 'Captain B', price: 1500, user: user2)
+
+# Create Reservations
+Reservation.create(date: DateTime.new(2023, 9, 15), city: 'Miami', user: User.first, yacht: Yacht.first)
+Reservation.create(date: DateTime.new(2023, 10, 20), city: 'Los Angeles', user: User.first, yacht: Yacht.last)
