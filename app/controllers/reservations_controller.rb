@@ -9,11 +9,9 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    puts params.inspect
     reservation = @yacht.reservations.build(reservation_params)
     reservation.user = current_user || @user # after the login implementation we will change this to current_user
 
-    puts reservation.inspect
     if reservation.save
       render json: {
         success: true,
