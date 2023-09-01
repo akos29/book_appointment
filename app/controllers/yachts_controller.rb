@@ -19,9 +19,6 @@ class YachtsController < ApplicationController
       status: { code: 201, message: 'New yachts added.' },
       data: { id: yacht.id }
     }
-    yacht.yacht_image.attach(io: File.open(Rails.root.join('spec', 'upload', 'files', yacht_params[yacht_image])), filename: 'sample.jpeg', content_type: 'image/jpeg')
-
-
     # The after_create callback will be called after the yacht has been saved.
   end
 
