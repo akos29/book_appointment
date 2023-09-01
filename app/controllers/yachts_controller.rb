@@ -21,18 +21,6 @@ class YachtsController < ApplicationController
     }
     # The after_create callback will be called after the yacht has been saved.
   end
-
-
-  def after_create
-    # Get the id of the newly created yacht.
-    yacht_id = yacht.id
-  
-    # Do something with the yacht id.
-    render json: {
-      status: { code: 201, message: 'New yachts added.' },
-      data: { id: yacht_id }
-    }
-  end
   
   def show
     @yacht = Yacht.find(params[:id])
