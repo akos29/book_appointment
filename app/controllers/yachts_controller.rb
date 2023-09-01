@@ -11,16 +11,16 @@ class YachtsController < ApplicationController
   end
 
 
-  # def after_create
-  #   # Get the id of the newly created yacht.
-  #   yacht_id = yacht.id
+  def after_create
+    # Get the id of the newly created yacht.
+    yacht_id = yacht.id
   
-  #   # Do something with the yacht id.
-  #   render json: {
-  #     status: { code: 201, message: 'New yachts added.' },
-  #     data: { id: yacht_id }
-  #   }
-  # end
+    # Do something with the yacht id.
+    render json: {
+      status: { code: 201, message: 'New yachts added.' },
+      data: { id: yacht_id }
+    }
+  end
 
   def create
     @yacht = Yacht.new(yacht_params)
