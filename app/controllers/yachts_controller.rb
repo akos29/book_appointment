@@ -22,7 +22,7 @@ class YachtsController < ApplicationController
     }
     # The after_create callback will be called after the yacht has been saved.
   end
-  
+
   def show
     @yacht = Yacht.find(params[:id])
     render json: @yacht.as_json.merge(photo: url_for(@yacht.yacht_image))
