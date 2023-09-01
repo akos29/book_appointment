@@ -56,4 +56,6 @@ gem 'jsonapi-serializer', '~> 2.2'
 
 gem 'rubocop', '~> 1.56'
 
+gem 'factory_bot_rails'
+
 gem 'rspec-rails'
