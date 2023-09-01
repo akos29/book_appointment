@@ -3,11 +3,12 @@ class YachtsController < ApplicationController
   respond_to :json
 
   def index
-
-    @yachts = Yacht.all.joins(:yacht_image_attachment)
-    render json: @yachts.map { |yacht|
-                   yacht.as_json.merge(photo: url_for(yacht.yacht_image))
-                 }
+    @yachts = Yacht.all
+    render json: @yachts
+    # @yachts = Yacht.all.joins(:yacht_image_attachment)
+    # render json: @yachts.map { |yacht|
+    #                yacht.as_json.merge(photo: url_for(yacht.yacht_image))
+    #              }
   end
 
   def create
