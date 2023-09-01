@@ -10,6 +10,21 @@ class YachtsController < ApplicationController
                  }
   end
 
+  def create
+    yacht = Yacht.new(yacht_params)
+
+    # This will save the yacht and then call the after_create callback.
+    yacht.save!
+    render json: {
+      status: { code: 201, message: 'New yachts added.' },
+      data: { id: yacht.id }
+    }
+    yacht.yacht_image.attach(io: File.open(Rails.root.join('spec', 'upload', 'files', yacht_params[yacht_image])), filename: 'sample.jpeg', content_type: 'image/jpeg')
+
+
+    # The after_create callback will be called after the yacht has been saved.
+  end
+
 
   def after_create
     # Get the id of the newly created yacht.
@@ -20,22 +35,6 @@ class YachtsController < ApplicationController
       status: { code: 201, message: 'New yachts added.' },
       data: { id: yacht_id }
     }
-  end
-
-  def create
-    @yacht = Yacht.new(yacht_params)
-    p current_user
-    @yacht.user_id = current_user.id
-    if @yacht.save
-      render json: {
-        status: { code: 201, message: 'New yachts added.' },
-        data: @yacht
-      }
-    else
-      render json: {
-        status: { message: 'Something went wrong!' }
-      }, status: :unprocessable_entity
-    end
   end
   
   def show
