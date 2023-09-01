@@ -1,5 +1,5 @@
 class ReservationsController < ApplicationController
-  before_action :set_yacht, :set_user, only: [:create, :index]
+  before_action :set_yacht, :set_user, only: %i[create index]
 
   def index
     # @reservations = current_user.reservations.includes(:user, yacht: :user)
@@ -16,7 +16,7 @@ class ReservationsController < ApplicationController
       render json: {
         success: true,
         message: 'Reservation created successfully',
-        reservation: reservation.as_json  # Include the reservation details
+        reservation: reservation.as_json # Include the reservation details
       }, status: :created
     else
       render json: {
