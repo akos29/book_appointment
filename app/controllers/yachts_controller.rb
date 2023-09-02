@@ -10,19 +10,13 @@ class YachtsController < ApplicationController
   end
 
   def create
-    @yacht = Yacht.new(yacht_params)
-    @yacht.user_id = current_user.id
-    @yacht.yacht_image.attach(params[:yacht_image]) # image
-    if @yacht.save
-      render json: {
-        status: { code: 201, message: 'New yachts added.' },
-        data: @yacht
-      }
-    else
-      render json: {
-        status: { message: 'Something went wrong!' }
-      }, status: :unprocessable_entity
-    end
+    yacht = Yacht.new(yacht_params)
+    yacht.save!
+    render json: {
+      status: { code: 201, message: 'New yachts added.' },
+      data: { id: yacht.id }
+    }
+    # The after_create callback will be called after the yacht has been saved.
   end
 
   def show
@@ -33,6 +27,6 @@ class YachtsController < ApplicationController
   private
 
   def yacht_params
-    params.require(:yacht).permit(:model, :captain_name, :price, :yacht_image)
+    params.require(:yacht).permit(:model, :captain_name, :price, :user_id, :yacht_image)
   end
 end
