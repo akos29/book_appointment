@@ -3,18 +3,14 @@ class YachtsController < ApplicationController
   respond_to :json
 
   def index
-    @yachts = Yacht.all
-    render json: @yachts
-    # @yachts = Yacht.all.joins(:yacht_image_attachment)
-    # render json: @yachts.map { |yacht|
-    #                yacht.as_json.merge(photo: url_for(yacht.yacht_image))
-    #              }
+    @yachts = Yacht.all.joins(:yacht_image_attachment)
+    render json: @yachts.map { |yacht|
+                   yacht.as_json.merge(photo: url_for(yacht.yacht_image))
+                 }
   end
 
   def create
     yacht = Yacht.new(yacht_params)
-
-    # This will save the yacht and then call the after_create callback.
     yacht.save!
     render json: {
       status: { code: 201, message: 'New yachts added.' },
