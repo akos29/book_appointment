@@ -26,6 +26,16 @@ class YachtsController < ApplicationController
 
   def destroy
     @yacht = Yacht.find(params[:id])
+
+    if @yacht.destroy
+      render json: {
+        status: {code: 200, message: 'Yacht deleted successfully.'}
+      }
+    else
+      render json: {
+        status: {message: 'Failed to delete yacht.'}
+      }, status: :unprocessable_entity
+    end
   end
 
   private
