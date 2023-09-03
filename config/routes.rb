@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   }
 
   resources :yachts, only: [:index, :create, :show], defaults: { format: 'json' } do
-    resources :reservations, only: [:create, :index]
+    resources :reservations, only: [:create, :index, :destroy]
   end
   
 
