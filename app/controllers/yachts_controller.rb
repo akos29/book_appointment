@@ -24,6 +24,9 @@ class YachtsController < ApplicationController
     render json: @yacht.as_json.merge(photo: url_for(@yacht.yacht_image))
   end
 
+  def destroy
+  end
+
   private
 
   def yacht_params
