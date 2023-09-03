@@ -13,7 +13,6 @@ Rails.application.routes.draw do
     resources :reservations, only: [:create, :index, :destroy]
   end
   
-
   namespace :api do
     namespace :v1 do
       resources :yachts, only: [:show]
