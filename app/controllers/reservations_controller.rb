@@ -26,7 +26,8 @@ class ReservationsController < ApplicationController
     end
   end
 
-  def destroy # DELETE /reservations/:id
+  # DELETE /reservations/:id
+  def destroy
     reservation = Reservation.find(params[:id])
     reservation.destroy
     render json: { success: true, message: 'Reservation deleted successfully' }, status: :ok
