@@ -9,7 +9,10 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
-  resources :yachts, only: [:index, :create, :show], defaults: {format: 'json'}
+  resources :yachts, only: [:index, :create, :show], defaults: { format: 'json' } do
+    resources :reservations, only: [:create, :index, :destroy]
+  end
+  
 
   namespace :api do
     namespace :v1 do
