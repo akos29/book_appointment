@@ -2,20 +2,20 @@ default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
+  encoding: unicode
+  host: localhost
+  username: postgres
+  password: 1985
 
 development:
   <<: *default
-  database: yatch-app
-  username: <%= ENV['DB_USERNAME'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
-  host: localhost
+  database: yacht_app_development
+  
 
 test:
   <<: *default
-  database: yatch_app_test
-  username: <%= ENV['DB_USERNAME'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
+  database: yacht_app_test
 
 production:
   <<: *default
-  database: yatch_app_production
+  database: yacht_app_production
