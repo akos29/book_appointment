@@ -25,6 +25,7 @@ class YachtsController < ApplicationController
   end
 
   def destroy
+    @yacht = Yacht.find(params[:id])
   end
 
   private
