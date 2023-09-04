@@ -9,7 +9,7 @@
 # Create a user
 user = User.create!(
   name: 'Van',
-  email: 'van@gmail.com',
+  email: 'van2023@gmail.com',
   password: '123456'
 )
 
@@ -76,18 +76,18 @@ yacht = Yacht.create!(
 
 puts 'Seed data created successfully.'
 
-# Create Users
-user1 = User.create!(name: 'Kibre', email: 'kibre@example.com', password: 'password')
-user2 = User.create!(name: 'Lagurd ', email: 'lagurd@example.com', password: 'password')
-user3 = User.create!(name: 'Mahbub ', email: 'mahbub@example.com', password: 'password')
+# # Create Users
+# user1 = User.create!(name: 'Kibre', email: 'kibre@example.com', password: 'password')
+# user2 = User.create!(name: 'Lagurd ', email: 'lagurd@example.com', password: 'password')
+# user3 = User.create!(name: 'Mahbub ', email: 'mahbub@example.com', password: 'password')
 
-# Create Yachts
-yacht1 = Yacht.create(model: 'Yacht Model 1', captain_name: 'Captain Kibre', price: 1000, user: user1)
-yacht1.yacht_image.attach(io: File.open(Rails.root.join('spec', 'upload', 'files', 'sample2.jpeg')), filename: 'sample2.jpeg', content_type: 'image/jpeg')
-yacht2 = Yacht.create(model: 'Yacht Model 2', captain_name: 'Captain Laguard', price: 1500, user: user2)
-yacht2.yacht_image.attach(io: File.open(Rails.root.join('spec', 'upload', 'files', 'sample3.jpeg')), filename: 'sample3.jpeg', content_type: 'image/jpeg')
-yacht3 = Yacht.create(model: 'Yacht Model 2', captain_name: 'Captain Mahbub', price: 1500, user: user3)
-yacht3.yacht_image.attach(io: File.open(Rails.root.join('spec', 'upload', 'files', 'sample4.jpeg')), filename: 'sample4.jpeg', content_type: 'image/jpeg')
-# Create Reservations
-Reservation.create(date: DateTime.new(2023, 9, 15), city: 'Miami', user: User.first, yacht: Yacht.first)
-Reservation.create(date: DateTime.new(2023, 10, 20), city: 'Los Angeles', user: User.first, yacht: Yacht.last)
+# # Create Yachts
+# yacht1 = Yacht.create(model: 'Yacht Model 1', captain_name: 'Captain Kibre', price: 1000, user: user1)
+# yacht1.yacht_image.attach(io: File.open(Rails.root.join('spec', 'upload', 'files', 'sample2.jpeg')), filename: 'sample2.jpeg', content_type: 'image/jpeg')
+# yacht2 = Yacht.create(model: 'Yacht Model 2', captain_name: 'Captain Laguard', price: 1500, user: user2)
+# yacht2.yacht_image.attach(io: File.open(Rails.root.join('spec', 'upload', 'files', 'sample3.jpeg')), filename: 'sample3.jpeg', content_type: 'image/jpeg')
+# yacht3 = Yacht.create(model: 'Yacht Model 2', captain_name: 'Captain Mahbub', price: 1500, user: user3)
+# yacht3.yacht_image.attach(io: File.open(Rails.root.join('spec', 'upload', 'files', 'sample4.jpeg')), filename: 'sample4.jpeg', content_type: 'image/jpeg')
+# # Create Reservations
+# Reservation.create(date: DateTime.new(2023, 9, 15), city: 'Miami', user: User.first, yacht: Yacht.first)
+# Reservation.create(date: DateTime.new(2023, 10, 20), city: 'Los Angeles', user: User.first, yacht: Yacht.last)
