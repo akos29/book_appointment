@@ -3,7 +3,7 @@ class YachtsController < ApplicationController
   respond_to :json
 
   def index
-    @yachts = Yacht.all.joins(:yacht_image_attachment)
+    @yachts = Yacht.all.where(is_deleted: !true).joins(:yacht_image_attachment)
     render json: @yachts.map { |yacht|
                    yacht.as_json.merge(photo: url_for(yacht.yacht_image))
                  }
@@ -19,6 +19,9 @@ class YachtsController < ApplicationController
     # The after_create callback will be called after the yacht has been saved.
   end
 
+  def edit
+  end
+
   def show
     @yacht = Yacht.find(params[:id])
     render json: @yacht.as_json.merge(photo: url_for(@yacht.yacht_image))
@@ -26,15 +29,10 @@ class YachtsController < ApplicationController
 
   def destroy
     @yacht = Yacht.find(params[:id])
-
-    if @yacht.destroy
-      render json: {
-        status: { code: 200, message: 'Yacht deleted successfully.' }
-      }
+    if @yacht.update(is_deleted: true)
+      redirect_to yachts_path, notice: 'Yacht was successfully marked as deleted.'
     else
-      render json: {
-        status: { message: 'Failed to delete yacht.' }
-      }, status: :unprocessable_entity
+      redirect_to yachts_path, alert: 'Failed to mark the yacht as deleted.'
     end
   end
 
