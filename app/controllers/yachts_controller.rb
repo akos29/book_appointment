@@ -29,11 +29,11 @@ class YachtsController < ApplicationController
 
     if @yacht.destroy
       render json: {
-        status: {code: 200, message: 'Yacht deleted successfully.'}
+        status: { code: 200, message: 'Yacht deleted successfully.' }
       }
     else
       render json: {
-        status: {message: 'Failed to delete yacht.'}
+        status: { message: 'Failed to delete yacht.' }
       }, status: :unprocessable_entity
     end
   end
