@@ -1,0 +1,50 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/yachts":
+    get:
+      summary: Display all yachts
+      tags:
+      - Yachts
+      parameters:
+      - name: yachts
+        in: response
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              model:
+                type: string
+              captain_name:
+                type: string
+              price:
+                type: string
+              user_id:
+                type: integer
+              created_at:
+                type: string
+                format: date-time
+              updated_at:
+                type: string
+                format: date-time
+              photo:
+                type: string
+                format: uri
+          required:
+          - model
+          - captain_name
+          - price
+      responses:
+        '200':
+          description: Recieved all yachts data
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
