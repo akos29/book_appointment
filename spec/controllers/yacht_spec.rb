@@ -21,7 +21,6 @@ RSpec.describe YachtsController, type: :controller do
       get :index
 
       expect(response).to have_http_status(:ok)
-      p response.body
       expect(JSON.parse(response.body).length).to eq(1)
     end
   end
