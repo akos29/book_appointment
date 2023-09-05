@@ -19,8 +19,7 @@ class YachtsController < ApplicationController
     # The after_create callback will be called after the yacht has been saved.
   end
 
-  def edit
-  end
+  def edit; end
 
   def show
     @yacht = Yacht.find(params[:id])
