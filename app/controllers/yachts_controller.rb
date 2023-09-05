@@ -3,7 +3,7 @@ class YachtsController < ApplicationController
   respond_to :json
 
   def index
-    @yachts = Yacht.all.where(is_deleted: !true).joins(:yacht_image_attachment)
+    @yachts = Yacht.all.joins(:yacht_image_attachment)
     render json: @yachts.map { |yacht|
                    yacht.as_json.merge(photo: url_for(yacht.yacht_image))
                  }
@@ -29,10 +29,11 @@ class YachtsController < ApplicationController
 
   def destroy
     @yacht = Yacht.find(params[:id])
+
     if @yacht.update(is_deleted: true)
-      redirect_to yachts_path, notice: 'Yacht was successfully marked as deleted.'
+      render json: { success: true, message: 'Yacht marked as deleted successfully' }, status: :ok
     else
-      redirect_to yachts_path, alert: 'Failed to mark the yacht as deleted.'
+      render json: { success: false, error: 'Failed to mark the yacht as deleted' }, status: :unprocessable_entity
     end
   end
 
