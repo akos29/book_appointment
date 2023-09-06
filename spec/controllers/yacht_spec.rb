@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'swagger_helper'
 
 RSpec.describe YachtsController, type: :controller do
   describe 'GET #index' do
