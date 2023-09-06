@@ -19,9 +19,21 @@ class YachtsController < ApplicationController
     # The after_create callback will be called after the yacht has been saved.
   end
 
+  def edit; end
+
   def show
     @yacht = Yacht.find(params[:id])
     render json: @yacht.as_json.merge(photo: url_for(@yacht.yacht_image))
+  end
+
+  def destroy
+    @yacht = Yacht.find(params[:id])
+
+    if @yacht.update(is_deleted: true)
+      render json: { success: true, message: 'Yacht marked as deleted successfully' }, status: :ok
+    else
+      render json: { success: false, error: 'Failed to mark the yacht as deleted' }, status: :unprocessable_entity
+    end
   end
 
   private
