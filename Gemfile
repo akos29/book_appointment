@@ -60,3 +60,5 @@ gem 'rubocop', '~> 1.56'
 gem 'factory_bot_rails'
 
 gem 'rspec-rails'
+
+gem 'rswag', '~> 2.10'
