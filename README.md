@@ -156,13 +156,13 @@ You can deploy this project using:
 ## 👥 Authors <a name="authors"></a>
 
 
-👤 **Mahabub Alam**
+👤 **Author1**
 
-- GitHub: [@mahabubx7](https://github.com/mahabubx7)
-- Twitter: [@mahabub\_\_7](https://twitter.com/mahabub__7)
-- LinkedIn: [in/mahabubx7](https://linkedin.com/in/mahabubx7)
+- GitHub: [@githubhandle](https://github.com/githubhandle)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
-👤 **Lugard Agu**
+👤 **Author2**
 
 - GitHub: [@lugard1](https://github.com/lugard1)
 - Twitter: [@Dsn3kings](https://twitter.com/Dsn3kings)
