@@ -9,10 +9,10 @@
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
+  - [Kanban Board](#kanban-board)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -31,6 +31,15 @@
 # 📖 Yacht Booking App <a name="about-project"></a>
 
 **Yacht Booking App** is a booking application where users can reserve their selected yachts. Also users can see their reservations, cancel the reservation as well as add more Yachts.
+
+## Kanban Board <a name="kanban-board"></a>
+- The link for the [kanban board](https://github.com/users/akos29/projects/6)
+- The link for the  [Initial state of our Kanban board](https://github.com/akos29/book_appointment/issues/7)
+- We are a team of four:
+   @vanina123,
+   @lugard1,
+   @mahabubx7,
+   @akos29.
 
 ## 🛠 Built With <a name="built-with"></a>
 
