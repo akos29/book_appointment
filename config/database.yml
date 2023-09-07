@@ -6,10 +6,6 @@
 #
 default: &default
   adapter: postgresql
-  host: <%= ENV.fetch("DB_HOST") %>
-  port: <%= ENV.fetch("DB_PORT") %>
-  username: <%= ENV.fetch("DB_USER") %>
-  password: <%= ENV.fetch("DB_PASS") %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
   encoding: unicode
@@ -26,3 +22,4 @@ test:
 production:
   <<: *default
   database: yacht_app_production
+  url: <%= ENV['DATABASE_URL'] %>
