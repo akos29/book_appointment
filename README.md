@@ -28,7 +28,6 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-
 # 📖 Yacht Booking App <a name="about-project"></a>
 
 **Yacht Booking App** is a booking application where users can reserve their selected yachts. Also users can see their reservations, cancel the reservation as well as add more Yachts.
@@ -47,7 +46,7 @@
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://expressjs.com/">Ruby on Rails</a></li>
   </ul>
 </details>
 
@@ -72,15 +71,14 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 💻 Getting Started <a name="getting-started"></a>
-
 
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
+
 - Visual studio code(VSC) or any code editor
 - Git, Gitbash
 - Github account
@@ -93,11 +91,9 @@ Example command:
  gem install rubocop and many more found in the gem file
 ```
 
-
 ### Setup
 
 Clone this repository to your desired folder:
-
 
 Example commands:
 
@@ -105,12 +101,10 @@ Example commands:
   cd book_appointment
   git clone https://github.com/akos29/book_appointment.git
 ```
--
 
 ### Install
 
 Install this project with:
-
 
 Example command:
 
@@ -121,27 +115,53 @@ Example command:
 
 ### Usage
 
-To run the project, execute the following command:
+##### Configure the credentials,
 
+```sh
+ rake secret
+ EDITOR='code --wait' rails credentials:edit
+```
+
+Now, put the generated secret key in the credential file as `jwt_secret: your_secret_key_here`. Then save & close it.
+
+##### Setup Database first,
+
+**Config the .env file**
+
+```env
+DB_USER=user
+DB_PASS=password
+DB_HOST=localhost
+DB_POR=5432
+```
+
+```sh
+ rails db:create db:migrate db:seed
+```
+
+**Note: If there is database error still after migrate (for testing/rspec), Do this and try again**
+
+```sh
+ RAILS_ENV=test rails db:create db:migrate db:seed
+```
+
+To run the project, execute the following command:
 
 Example command:
 
 ```sh
   rails server
 ```
--
 
 ### Run tests
 
 To run tests, run the following command:
-
 
 Example command:
 
 ```sh
   rspec spec
 ```
--
 
 ### Deployment
 
@@ -152,9 +172,7 @@ You can deploy this project using:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 👥 Authors <a name="authors"></a>
-
 
 👤 **Author1**
 
@@ -169,6 +187,7 @@ You can deploy this project using:
 - LinkedIn: [@LugardAgu](https://www.linkedin.com/in/lugardagu)
 
 👤 **Nana Vanina**
+
 - GitHub: [@vanina123](https://github.com/vanina123)
 - Twitter: [@Dufevan](https://twitter.com/DufeVanina)
 - LinkedIn: [Vanina](https://www.linkedin.com/in/larissa-vanina/)
@@ -178,18 +197,15 @@ You can deploy this project using:
 - GitHub: [@akos29](https://github.com/akos29)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/kibrewossen-y-mekasha/)
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🔭 Future Features <a name="future-features"></a>
 
--  **[More implementation in the app]**
+- **[More implementation in the app]**
 - **[Add Notications]**
 - **[improve on styling]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -199,22 +215,17 @@ Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## ⭐️ Show your support <a name="support"></a>
-
 
 If you like this project kindly like and share. Thank you
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
 
 We would like to thank [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/) for such a great design which guided us implement the work. And also Microverse for their support and great collaboration
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 📝 License <a name="license"></a>
 
