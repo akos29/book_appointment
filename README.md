@@ -65,9 +65,11 @@
 - **[View all reservation]**
 - **[Responsive App]**
 
-<!-- ## 🚀 Live Demo <a name="live-demo"></a> -->
+## 🚀 Live Demo <a name="live-demo"></a> 
 
-<!-- - [Live Demo Link](https://yourdeployedapplicationlink.com) -->
+- [Live Demo Link](https://yourdeployedapplicationlink.com) 
+- [API Deployment Link](https://yacht-booking-api.onrender.com/) 
+- [API GitHub repository Link](https://github.com/akos29/book_appointment/) 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
